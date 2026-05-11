@@ -7,6 +7,5 @@ export async function load() {
   const res = await fetch(URL);
   const data = await res.json();
 
-  console.log(data._embedded.events);
   return data._embedded.events;
 }
