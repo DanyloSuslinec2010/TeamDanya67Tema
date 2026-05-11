@@ -5,7 +5,30 @@ const todosRoot = document.getElementById('todos');
 const todoForm = document.getElementById('todo-form');
 const todoText = document.getElementById('todo-text');
 
-load();
+async function init() {
+  try {
+    const events = await load();
+    todosRoot.innerHTML = '';
+    
+    if (!events || !events.length) {
+      todosRoot.textContent = 'События не найдены.';
+      return;
+    }
+
+    const list = document.createElement('ul');
+    events.forEach((event) => {
+      const item = document.createElement('li');
+      item.append(createListFromObject(event));
+      list.append(item);
+    });
+    todosRoot.append(list);
+  } catch (error) {
+    todosRoot.textContent = 'Ошибка загрузки данных.';
+    console.error(error);
+  }
+}
+
+init();
 
 todoForm.addEventListener('submit', (event) => {
   event.preventDefault();
