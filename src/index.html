@@ -1,213 +1,66 @@
 <!doctype html>
 <html lang="ru">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Event Boster</title>
-    <link rel="stylesheet" href="./style.css" />
-    <!DOCTYPE html>
-<html>
 
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Event Boster</title>
+  <link rel="stylesheet" href="./style.css" />
+</head>
 
+<body>
 
-  </head>
-  <body>
-    <div class="page">
-      <header class="topbar">
-        <div class="logo">
-          <span>EB</span>
-          <div>
-            <div>Event</div>
-            <div style="font-size:0.7rem; color: var(--text-muted); letter-spacing:0.1em; text-transform: uppercase;">Boster</div>
-          </div>
+  <div class="header-wrapper">
+    <header class="topbar">
+      <div class="logo">
+        <div class="logo-row">
+          <span class="logo-letter">E</span>
+          <span class="logo-icon logo-icon-triangle"></span>
+          <span class="logo-letter">E</span>
+          <span class="logo-letter">N</span>
+          <span class="logo-letter">T</span>
         </div>
-      </header>
-
-      <section class="hero">
-        <h1 class="hero-title">Find best events around the world</h1>
-
-        <div class="hero-search">
-          <input type="search" placeholder="Start searching" />
-          <select>
-            <option>Choose country</option>
-            <option>Ukraine</option>
-            <option>USA</option>
-            <option>Germany</option>
-            <option>France</option>
-          </select>
+        <div class="logo-row">
+          <span class="logo-letter">B</span>
+          <span class="logo-icon logo-icon-circle"></span>
+          <span class="logo-letter">S</span>
+          <span class="logo-letter">T</span>
+          <span class="logo-letter">E</span>
+          <span class="logo-letter">D</span>
         </div>
-      </section>
-
-      <section class="api-demo">
-        <h2>Todo API</h2>
-        <div id="todos" class="todos-list">Загружаем данные...</div>
-        <form id="todo-form" class="todo-form">
-          <input id="todo-text" type="text" placeholder="Новая задача" required />
-          <button type="submit">Добавить задачу</button>
-        </form>
-      </section>
-
-      <main class="cards">
-        <article class="event-card">
-          <img src="./europa.png" alt="Eurovision Party" />
-          <div class="card-body">
-            <h2 class="event-title">Eurovision 2021 finals!</h2>
-            <p class="event-date">2021-05-13</p>
-            <p class="event-place">Palace of Ukraine</p>
-          </div>
-        </article>
-
-        <article class="event-card">
-          <img src="./black.eyedpeds.png" alt="Atlas Weekend" />
-          <div class="card-body">
-            <h2 class="event-title">Atlas Weekend</h2>
-            <p class="event-date">2021-06-09</p>
-            <p class="event-place">VDNH</p>
-          </div>
-        </article>
-
-        <article class="event-card">
-          <img src="./lp.png" alt="LP" />
-          <div class="card-body">
-            <h2 class="event-title">LP</h2>
-            <p class="event-date">2021-07-27</p>
-            <p class="event-place">Palace of Ukraine</p>
-          </div>
-        </article>
-
-        <article class="event-card">
-          <img src="./monatik.png" alt="MONATIK" />
-          <div class="card-body">
-            <h2 class="event-title">MONATIK</h2>
-            <p class="event-date">2021-07-17</p>
-            <p class="event-place">VDNH</p>
-          </div>
-        </article>
-
-        <article class="event-card">
-          <img src="./monatik.png" alt="MONATIK" />
-          <div class="card-body">
-            <h2 class="event-title">MONATIK</h2>
-            <p class="event-date">2021-07-17</p>
-            <p class="event-place">VDNH</p>
-          </div>
-        </article>
-
-        <article class="event-card">
-          <img src="./lp.png" alt="LP" />
-          <div class="card-body">
-            <h2 class="event-title">LP</h2>
-            <p class="event-date">2021-07-27</p>
-            <p class="event-place">Palace of Ukraine</p>
-          </div>
-        </article>
-
-        <article class="event-card">
-          <img src="./black.eyedpeds.png" alt="Atlas Weekend" />
-          <div class="card-body">
-            <h2 class="event-title">Atlas Weekend</h2>
-            <p class="event-date">2021-06-09</p>
-            <p class="event-place">VDNH</p>
-          </div>
-        </article>
-
-        <article class="event-card">
-          <img src="./europa.png" alt="Eurovision Party" />
-          <div class="card-body">
-            <h2 class="event-title">Eurovision 2021 finals!</h2>
-            <p class="event-date">2021-05-13</p>
-            <p class="event-place">Palace of Ukraine</p>
-          </div>
-        </article>
-
-        <article class="event-card">
-          <img src="./black.eyedpeds.png" alt="Atlas Weekend" />
-          <div class="card-body">
-            <h2 class="event-title">Atlas Weekend</h2>
-            <p class="event-date">2021-06-09</p>
-            <p class="event-place">VDNH</p>
-          </div>
-        </article>
-
-        <article class="event-card">
-          <img src="./europa.png" alt="Eurovision Party" />
-          <div class="card-body">
-            <h2 class="event-title">Eurovision 2021 finals!</h2>
-            <p class="event-date">2021-05-13</p>
-            <p class="event-place">Palace of Ukraine</p>
-          </div>
-        </article>
-
-        <article class="event-card">
-          <img src="./monatik.png" alt="MONATIK" />
-          <div class="card-body">
-            <h2 class="event-title">MONATIK</h2>
-            <p class="event-date">2021-07-17</p>
-            <p class="event-place">VDNH</p>
-          </div>
-        </article>
-
-        <article class="event-card">
-          <img src="./lp.png" alt="LP" />
-          <div class="card-body">
-            <h2 class="event-title">LP</h2>
-            <p class="event-date">2021-07-27</p>
-            <p class="event-place">Palace of Ukraine</p>
-          </div>
-        </article>
-
-        <article class="event-card">
-          <img src="./black.eyedpeds.png" alt="Atlas Weekend" />
-          <div class="card-body">
-            <h2 class="event-title">Atlas Weekend</h2>
-            <p class="event-date">2021-06-09</p>
-            <p class="event-place">VDNH</p>
-          </div>
-        </article>
-
-        <article class="event-card">
-          <img src="./europa.png" alt="Eurovision Party" />
-          <div class="card-body">
-            <h2 class="event-title">Eurovision 2021 finals!</h2>
-            <p class="event-date">2021-05-13</p>
-            <p class="event-place">Palace of Ukraine</p>
-          </div>
-        </article>
-
-        <article class="event-card">
-          <img src="./monatik.png" alt="MONATIK" />
-          <div class="card-body">
-            <h2 class="event-title">MONATIK</h2>
-            <p class="event-date">2021-07-17</p>
-            <p class="event-place">VDNH</p>
-          </div>
-        </article>
-
-        <article class="event-card">
-          <img src="./lp.png" alt="LP" />
-          <div class="card-body">
-            <h2 class="event-title">LP</h2>
-            <p class="event-date">2021-07-27</p>
-            <p class="event-place">Palace of Ukraine</p>
-          </div>
-        </article>
-      </main>
-
-      <div class="pagination">
-        <button>&lt;</button>
-        <span class="page active">1</span>
-        <span class="page">2</span>
-        <span class="page">3</span>
-        <span class="page">4</span>
-        <span class="page">5</span>
-        <button>&gt;</button>
       </div>
+    </header>
+
+    <section class="hero">
+      <h1 class="hero-title">Find best events around the world</h1>
+
+      <div class="hero-search">
+        <input type="search" placeholder="Start searching" />
+        <select>
+          <option>Choose country</option>
+          <option>Ukraine</option>
+          <option>USA</option>
+          <option>Germany</option>
+          <option>France</option>
+        </select>
+      </div>
+    </section>
+  </div>
 
 
-      <footer class="footer">© 2021 | All Rights Reserved | Developed with ♥ by GoIT Students</footer>
-    </div>
-    
-    <script type="module" src="./index.js"></script>
-  </body>
+
+  <main>
+    <ul class="events-list"></ul>
+  </main>
+
+
+
+  <footer class="footer">
+    © 2021 | All Rights Reserved | Developed with ♥ by GoIT Students
+  </footer>
+
+
+  <script type="module" src="./index.js"></script>
+</body>
+
 </html>
-А

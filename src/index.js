@@ -1,22 +1,23 @@
-import { load } from './js/fetch';
-import { renderEventCard } from './js/render';
+import { load } from './fetch.js';
+import { renderEventCard } from './render.js';
+
+const list = document.querySelector('.events-list')
 
 async function init() {
   try {
     const events = await load();
     
     if (!events || !events.length) {
-      todosRoot.textContent = 'Подiй не знайдено.';
+      list.textContent = 'Подiй не знайдено.';
       return;
     }
 
-    const list = document.createElement('ul');
-    events.forEach((event) => {
-   renderEventCard(event);
-  
+    const markup = events.map(renderEventCard).join("");
+    list.innerHTML = markup;  
+
   } catch (error) {
-    console.error(error);
-  });
+    console.log(error);
+  }
 }
 
 init();
