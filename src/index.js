@@ -1,5 +1,5 @@
-import { load } from './fetch.js';
-import { renderEventCard } from './render.js';
+import { load } from './js/fetch';
+import { renderEventCard } from './js/render';
 
 const list = document.querySelector('.events-list')
 
@@ -12,9 +12,11 @@ async function init() {
       return;
     }
 
+  
     const markup = events.map(renderEventCard).join("");
     list.innerHTML = markup;  
 
+    
   } catch (error) {
     console.log(error);
   }

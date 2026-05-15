@@ -1,66 +1,61 @@
 <!doctype html>
 <html lang="ru">
-
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Event Boster</title>
-  <link rel="stylesheet" href="./style.css" />
-</head>
-
-<body>
-
-  <div class="header-wrapper">
-    <header class="topbar">
-      <div class="logo">
-        <div class="logo-row">
-          <span class="logo-letter">E</span>
-          <span class="logo-icon logo-icon-triangle"></span>
-          <span class="logo-letter">E</span>
-          <span class="logo-letter">N</span>
-          <span class="logo-letter">T</span>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Event Boster</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+   
+      <header class="topbar">
+        <div class="logo">
+          <span>EB</span>
+          <div>
+            <div>Event</div>
+            <div
+              style="
+                font-size: 0.7rem;
+                color: var(--text-muted);
+                letter-spacing: 0.1em;
+                text-transform: uppercase;
+              "
+            >
+              Boster
+            </div>
+          </div>
         </div>
-        <div class="logo-row">
-          <span class="logo-letter">B</span>
-          <span class="logo-icon logo-icon-circle"></span>
-          <span class="logo-letter">S</span>
-          <span class="logo-letter">T</span>
-          <span class="logo-letter">E</span>
-          <span class="logo-letter">D</span>
+      </header>
+
+      <section class="hero">
+        <h1 class="hero-title">Find best events around the world</h1>
+
+        <div class="hero-search">
+          <input type="search" placeholder="Start searching" />
+          <select>
+            <option>Choose country</option>
+            <option>Ukraine</option>
+            <option>USA</option>
+            <option>Germany</option>
+            <option>France</option>
+          </select>
         </div>
-      </div>
-    </header>
+      </section>
 
-    <section class="hero">
-      <h1 class="hero-title">Find best events around the world</h1>
+    
 
-      <div class="hero-search">
-        <input type="search" placeholder="Start searching" />
-        <select>
-          <option>Choose country</option>
-          <option>Ukraine</option>
-          <option>USA</option>
-          <option>Germany</option>
-          <option>France</option>
-        </select>
-      </div>
-    </section>
-  </div>
+      <main>
+        <ul class="events-list"></ul>
+      </main>
 
+      
 
+      <footer class="footer">
+        © 2021 | All Rights Reserved | Developed with ♥ by GoIT Students
+      </footer>
+   
 
-  <main>
-    <ul class="events-list"></ul>
-  </main>
-
-
-
-  <footer class="footer">
-    © 2021 | All Rights Reserved | Developed with ♥ by GoIT Students
-  </footer>
-
-
-  <script type="module" src="./index.js"></script>
-</body>
-
+    <script type="module" src="./index.js"></script>
+  </body>
 </html>
+
